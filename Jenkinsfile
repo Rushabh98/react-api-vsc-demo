@@ -25,7 +25,7 @@ pipeline {
            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
       }
     failure {
-        mail to: 'saimanoj.napa@gmail.com',
+        mail to: 'rushabhmukkirwar@gmail.com',
             subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
             body: "Build failed for the pipeline: ${env.BUILD_URL}"
     }
